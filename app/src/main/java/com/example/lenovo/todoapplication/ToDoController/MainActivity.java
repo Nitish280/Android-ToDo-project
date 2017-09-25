@@ -75,9 +75,9 @@ public class MainActivity extends AppCompatActivity {
                 dialog.setPositiveButton("Add", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Log.d("ToDoListHomeActivity: ", "Add Title Of task: " + title.getText().toString());
-                        Log.d("ToDoListHomeActivity: ", "Description Of Task: " + description.getText().toString());
-                        Log.d("ToDoListHomeActivity: ", "Date: " + date.getYear() + "-" + date.getMonth() + 1 + "-" + date.getDayOfMonth());
+                        Log.d("MainActivity: ", "Add Title Of task: " + title.getText().toString());
+                        Log.d("MainActivity: ", "Description Of Task: " + description.getText().toString());
+                        Log.d("MainActivity: ", "Date: " + date.getYear() + "-" + date.getMonth() + 1 + "-" + date.getDayOfMonth());
 
 
                         final MyDatabaseManager myDatabaseManager = new MyDatabaseManager(getApplicationContext());
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
                 dialog.create();
                 dialog.show();
                 return true;
-            case R.id.incomlete:
+            case R.id.complete:
                 Toast.makeText(this, "Completed Tasks", Toast.LENGTH_LONG).show();
 
                 Intent intent=new Intent(MainActivity.this,SecondActivity.class);
